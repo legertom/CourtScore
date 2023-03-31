@@ -1,46 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tennis Scorekeeper</title>
+<html>
+  <head>
+    <title>CourtScore</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Tennis Scorekeeper</h1>
-        <div class="options">
-            <label for="sets">Number of sets:</label>
-            <select name="sets" id="sets">
-                <option value="1">1</option>
-                <option value="3">3</option>
-                <option value="5">5</option>
-                <option value="custom">Custom</option>
-            </select>
-        </div>
-        <div id="game">
-            <div class="player1">
-                <h2>Player 1</h2>
-                <div class="score">
-                    <div class="point"></div>
-                    <div class="game"></div>
-                    <div class="set"></div>
-                </div>
-            </div>
-            <div class="player2">
-                <h2>Player 2</h2>
-                <div class="score">
-                    <div class="point"></div>
-                    <div class="game"></div>
-                    <div class="set"></div>
-                </div>
-            </div>
-        </div>
-        <button class="clear" data-clear="point">Clear Point</button>
-        <button class="clear" data-clear="game">Clear Game</button>
-        <button class="clear" data-clear="set">Clear Set</button>
-        <button class="clear" data-clear="match">Clear Match</button>
+  </head>
+  <body>
+    <div id="scoreboard">
+      <h1>CourtScore</h1>
+      <div id="player1ScoreDisplay" class="score">0</div>
+      <div id="player2ScoreDisplay" class="score">0</div>
+      
+      <div id="message"></div>
+      <button id="player1Button">Player 1 Scored</button>
+      <button id="player2Button">Player 2 Scored</button>
+      <button id="undoButton">Undo Last Point</button>
+      <button id="resetButton">Reset Game</button>
+      <div id="pointsList">
+        <ul></ul>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

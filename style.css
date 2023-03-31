@@ -1,103 +1,179 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #2c3e50;
+    color: #fff;
+  }
+  
+  #scoreboard {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+  
+  .score {
+    display: inline-block;
+    font-size: 5em;
+    margin: 0 20px;
+    width: 150px;
+    text-align: center;
+    background-color: #27ae60;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  #pointsList {
+    margin-top: 40px;
+    text-align: left;
+  }
+  
+  #pointsList ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
   }
   
-  body {
-    font-family: sans-serif;
-    background-color: #F0FFF0;
+  #pointsList li {
+    margin-bottom: 10px;
   }
   
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  #message {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: 600;
   }
   
-  h1 {
+  button {
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    padding: 15px 32px;
     text-align: center;
-    color: #006400;
-    margin-bottom: 20px;
-  }
-  
-  .options {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  label {
-    font-weight: bold;
-    color: #006400;
-    margin-right: 10px;
-  }
-  
-  select {
-    padding: 5px;
-    border: 1px solid #006400;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    font-weight: 600;
     border-radius: 5px;
-    background-color: #F0FFF0;
-    color: #006400;
   }
   
-  #game {
+  button:hover {
+    background-color: #27ae60;
+  }
+  
+  button:active {
+    background-color: #219b53;
+  }
+  
+  #player1Button {
+    background-color: #e74c3c;
+  }
+  
+  #player1Button:hover {
+    background-color: #c0392b;
+  }
+  
+  #player1Button:active {
+    background-color: #922b21;
+  }
+  
+  #player2Button {
+    background-color: #3498db;
+  }
+  
+  #player2Button:hover {
+    background-color: #2980b9;
+  }
+  
+  #player2Button:active {
+    background-color: #1b4f72;
+  }
+  
+  .scoreboard-container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .player1, .player2 {
-    width: 45%;
-    padding: 20px;
-    border: 1px solid #006400;
-    border-radius: 10px;
-    background-color: #F0FFF0;
-  }
-  
-  .player1 h2, .player2 h2 {
-    margin: 0 0 10px 0;
-    color: #006400;
-  }
-  
-  .score {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .point, .game, .set {
-    width: 30%;
-    height: 50px;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: #006400;
-    border: 2px solid #006400;
-    border-radius: 10px;
-    background-color: #F0FFF0;
-    margin-right: 10px;
   }
   
-  .clear {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    border: none;
+  .score-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .score-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .score-container h2 {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .score-container h2:first-child {
+    color: #e74c3c;
+  }
+  
+  .score-container h2:last-child {
+    color: #3498db;
+  }
+  
+  .scoreboard-list {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
     border-radius: 5px;
-    background-color: #006400;
-    color: #F0FFF0;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
   }
   
-  .clear:hover {
-    background-color: #F0FFF0;
-    color: #006400;
+  .scoreboard-list h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .scoreboard-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .scoreboard-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .scoreboard-list li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .scoreboard-list li span {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  
+  .scoreboard-list li small {
+    font-size: 1.1em;
+    color: #777;
+    margin-left: 10px;
   }
   
