@@ -1,6 +1,8 @@
 # CourtScore
 
-CourtScore is a Tennis Scorekeeping Single Page Application (SPA) that helps keep track of the scores in a tennis game.
+[CourtScore](https://legertom.github.io/CourtScore) is a Tennis Scorekeeping Single Page Application (SPA) that helps keep track of the scores in a tennis game.
+
+[Project Website](https://legertom.github.io/CourtScore)
 
 ## Table of Contents
 - [Installation](#installation)
@@ -10,7 +12,7 @@ CourtScore is a Tennis Scorekeeping Single Page Application (SPA) that helps kee
 - [Future Versions](#future-versions)
 - [Links](#links)
 
-![CourtScore Preview](courtscore1.png)
+![CourtScore Preview](courtscore2.png)
 
 ## Installation
 To run the application, simply visit the project website: https://legertom.github.io/CourtScore
