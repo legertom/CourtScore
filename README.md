@@ -1,57 +1,30 @@
 # CourtScore
-Developed by Tom Léger
 
-## Description
-This is a scorekeeping app for a tennis game that allows the user to choose how many sets they want to play (1, 3, 5, or custom). The standard rules apply: Players win the set by winning 6 games, but they must win by two. If both players win 6 games, they play a tiebreak to 7 points, and must also win by 2.
+CourtScore is a Tennis Scorekeeping Single Page Application (SPA) that helps keep track of the scores in a Tennis game.
 
-The app UI is easy to use and has just a few large colorful buttons. The color scheme is tennis-themed, with variations on green, the color of grass. The application is designed mobile-first but also usable on the desktop.
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [About the Author](#about-the-author)
 
-## Files
-The project includes the following files:
+![CourtScore Preview](courtscore1.png)
 
-index.html: The HTML file that defines the structure of the app.
-styles.css: The CSS file that styles the app.
-script.js: The JavaScript file that provides the functionality for the app.
-## Functionality
-The app allows the user to:
+## Installation
+To run the application, simply visit the project website: https://legertom.github.io/CourtScore
 
-Choose the number of sets to play.
-Keep track of the points, games, and sets won by each player.
-Reset the score for the point, the game, the set, or the entire match.
-Play according to the standard rules.
-Code Excerpts
-Here are two code excerpts from the script.js file that demonstrate how the app keeps track of the points, games, and sets won by each player:
-
-```javascript
-function handlePointClick(e) {
-  const player = e.target.parentElement.parentElement.classList.contains(
-    "player1"
-  )
-    ? "player1"
-    : "player2";
-  if (player === "player1") {
-    player1Points++;
-  } else {
-    player2Points++;
-  }
-  updatePoints();
-  checkGameWinner();
-}
-```
-This function is called when the user clicks on a player's point button. It determines which player's button was clicked, increments their score, updates the score display, and checks if the game has been won.
-
-```javascript
-function updateSets() {
-  player1SetEl.textContent = player1Sets;
-  player2SetEl.textContent = player2Sets;
-}
-```
-This function updates the displayed set scores for both players by setting the text content of the corresponding HTML elements.
-
-## Links
-Link to the project
-Link to Tom Léger's GitHub
-Link to Tom Léger's portfolio
+## Features
+- The game follows the standard Tennis scoring system.
+- The game includes the Deuce system for games tied at 40 points.
+- The application keeps track of the points history, displayed as a list.
+- There is a function to undo the last point.
+- The game can be reset.
+- The application is responsive and works on all screen sizes.
 
 
 
+## Usage
+To keep track of the scores in a Tennis game, simply click on the "Player 1 Scored" or "Player 2 Scored" button to update the score. The application will automatically switch to the Deuce system when both players reach 40 points. To undo the last point, click the "Undo Last Point" button. To reset the game, click the "Reset Game" button.
+
+## About the Author
+This project was created by [Tom Léger](https://github.com/legertom). You can find the Github Repo for this project [here](https://github.com/legertom/CourtScore).
