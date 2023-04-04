@@ -8,18 +8,19 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+     
     <nav>
       <ul>
-        <li><a href="https://github.com/legertom/CourtScore">About</a></li>
+        <li><a href="#" id="about-link">About</a></li>
       </ul>
     </nav>
     <div id="scoreboard">
       <h1>CourtScore</h1>
-      <p>A Tennis Scorekeeping SPA</p>
+      
       <div class="score-container">
         <div id="player1ScoreDisplay" class="score">0</div>
         <div id="player2ScoreDisplay" class="score">0</div>
@@ -38,6 +39,11 @@
         <ul></ul>
       </div>
     </div>
+    <div id="modal" style="display: none;">
+      <span class="close">&times;</span>
+      <p>CourtScore is a Tennis Scorekeeping SPA by Tom Léger. View the repo <a href="https://github.com/legertom/CourtScore">here</a>.</p>
+      </div>
     <script src="script.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>
